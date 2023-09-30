@@ -1,19 +1,51 @@
 const btnLogin = document.getElementById("btn-login");
 const btnClose = document.querySelector(".js-close");
 const overlayLogin = document.querySelector(".js-login");
+const contentLogin = document.querySelector(".js-content-login");
 
 const overlayCad = document.querySelector(".js-cadastro");
 const btnCad = document.getElementById("js-btn-cad");
 const buttonCad = document.querySelector(".js-cad");
 const btnCloseCad = document.querySelector(".js-close-cad");
+const contentCad = document.querySelector('.js-content-cad')
 
-function openMenuLogin() {
-  overlayLogin.classList.toggle("active");
+const btnProd = document.getElementById("js-btn-prod");
+const overlayProd = document.querySelector(".js-produtos");
+
+const btnCar = document.getElementById("btn-car");
+const overlayCar = document.querySelector(".js-car");
+
+
+function openMenuLogin(event) {
+  event.preventDefault();
+
+  overlayLogin.classList.toggle('active');
+  contentLogin.classList.toggle('move');
 }
 
-function openMenuCad() {
-  overlayCad.classList.toggle("active");
-  overlayLogin.classList.remove("active");
+function openMenuCad(event) {
+  event.preventDefault();
+
+  overlayCad.classList.toggle('active');
+  contentCad.classList.toggle('move');
+
+  overlayLogin.classList.remove('active');
+  contentLogin.classList.remove('move');
+}
+
+function openProd(event){
+  event.preventDefault();
+
+  overlayProd.classList.toggle("active");
+  overlayProd.classList.toggle("move");
+}
+
+function openCar(event){
+  event.preventDefault();
+
+  overlayCar.classList.toggle("active");
+  overlayCar.classList.toggle("move");
+
 }
 
 btnLogin.addEventListener("click", openMenuLogin);
@@ -25,6 +57,11 @@ btnCad.addEventListener("click", openMenuCad);
 buttonCad.addEventListener("click", openMenuCad);
 
 btnCloseCad.addEventListener("click", openMenuCad);
+
+btnProd.addEventListener("click", openProd);
+
+btnCar.addEventListener("click", openCar);
+
 
 // Função para validar a complexidade da senha
 function validarSenha(senha) {

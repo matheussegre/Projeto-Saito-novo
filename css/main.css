@@ -264,6 +264,8 @@ header .right {
 }
 
 .s-produtos {
+  opacity: 0;
+  pointer-events: none;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -277,6 +279,11 @@ header .right {
   border-radius: 20px;
   z-index: 2025;
   background-color: white;
+  transform: translateY(-30px);
+  transition: all 0.3s;
+}
+.s-produtos.move {
+  transform: translateY(30px);
 }
 .s-produtos .conteudo {
   display: flex;
@@ -307,6 +314,54 @@ header .right {
   color: rgb(8, 8, 8);
 }
 
+.carrinho {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 33rem;
+  height: 33rem;
+  background-color: white;
+  z-index: 2026;
+  right: 30px;
+  top: 60px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  transform: translateY(-10px);
+  transition: all 0.3s;
+}
+.carrinho.move {
+  transform: translateY(10px);
+}
+.carrinho .conteudo {
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 0 10px;
+  gap: 80px;
+}
+.carrinho .conteudo .prod {
+  display: flex;
+  flex-direction: column;
+}
+.carrinho .conteudo .qtd {
+  display: flex;
+  gap: 20px;
+}
+.carrinho .conteudo .qtd form {
+  width: 50px;
+}
+.carrinho .conteudo .qtd form input {
+  width: 30px;
+  background-color: rgb(190, 190, 190);
+}
+
+.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
 footer {
   padding: 4.8rem;
   background-color: rgb(138, 63, 138);
@@ -333,7 +388,8 @@ footer .main .right {
   flex-grow: 1;
   max-width: 79.2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 100px;
 }
 footer .main .right .nav h6 {
   font-size: 1.6rem;

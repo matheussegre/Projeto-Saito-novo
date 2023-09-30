@@ -22,7 +22,8 @@ footer {
       flex-grow: 1;
       max-width: 79.2rem;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 100px;
       .nav {
         h6 {
         //   font-family: "Inter", sans-serif;
