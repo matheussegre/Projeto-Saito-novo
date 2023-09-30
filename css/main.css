@@ -27,7 +27,7 @@
   position: fixed;
   background-color: white;
   top: 88px;
-  left: 706px;
+  left: 524px;
   z-index: 2023;
   width: 40rem;
   height: 30rem;
@@ -106,7 +106,7 @@
   position: fixed;
   background-color: white;
   top: 88px;
-  left: 640px;
+  left: 472px;
   z-index: 2023;
   width: 50rem;
   height: 40rem;
@@ -193,6 +193,7 @@ header nav ul {
   gap: 15px;
 }
 header nav ul li {
+  cursor: pointer;
   font-size: 1.8rem;
 }
 header .right {
@@ -246,7 +247,7 @@ header .right {
   position: relative;
   width: 100%;
   height: 50rem;
-  padding-top: 11.3rem;
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -254,9 +255,37 @@ header .right {
 }
 .s-products .top {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 3rem;
+  color: white;
+}
+.s-products .top .btn-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+}
+.s-products .top .btn-div button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  font-size: 3rem;
+  margin-right: 80px;
+  border-radius: 10px;
+}
+.s-products .top .btn-div img {
+  animation: moverElemento 2s ease-in-out infinite;
+}
+.s-products .top p {
+  margin-top: 20px;
+  font-size: 3rem;
+}
+.s-products .top img {
+  width: 100%;
+  max-width: 50px;
 }
 .s-products .top h1 {
   font-size: 4rem;
@@ -285,6 +314,12 @@ header .right {
 .s-produtos.move {
   transform: translateY(30px);
 }
+.s-produtos .close {
+  display: none;
+  font-size: 2rem;
+  position: absolute;
+  right: 0;
+}
 .s-produtos .conteudo {
   display: flex;
   align-items: center;
@@ -301,6 +336,14 @@ header .right {
 }
 .s-produtos .conteudo .texto h3 {
   font-size: 3rem;
+}
+.s-produtos .conteudo .texto p {
+  margin-top: 20px;
+}
+.s-produtos .conteudo .texto strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 2rem;
 }
 .s-produtos .conteudo button {
   padding: 20px;
@@ -333,12 +376,21 @@ header .right {
 .carrinho.move {
   transform: translateY(10px);
 }
+.carrinho > button {
+  margin-top: 20px;
+  margin-left: 82px;
+  padding: 10px;
+  background-color: rgb(138, 63, 138);
+  border-radius: 10px;
+  color: white;
+}
 .carrinho .conteudo {
   display: flex;
   align-items: center;
   border: 2px solid black;
   border-radius: 4px;
   padding: 0 10px;
+  font-size: 15px;
   gap: 80px;
 }
 .carrinho .conteudo .prod {
@@ -349,12 +401,20 @@ header .right {
   display: flex;
   gap: 20px;
 }
+.carrinho .conteudo .qtd > button {
+  padding: 0 4px;
+}
+.carrinho .conteudo .qtd button {
+  font-size: 21px;
+  border: 1px solid black;
+}
 .carrinho .conteudo .qtd form {
   width: 50px;
 }
 .carrinho .conteudo .qtd form input {
-  width: 30px;
-  background-color: rgb(190, 190, 190);
+  width: 50px;
+  height: 30px;
+  background-color: rgb(228, 228, 228);
 }
 
 .active {
@@ -362,6 +422,14 @@ header .right {
   pointer-events: all;
 }
 
+@keyframes moverElemento {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
 footer {
   padding: 4.8rem;
   background-color: rgb(138, 63, 138);
@@ -523,6 +591,9 @@ footer span strong {
     right: 60px;
     margin-bottom: 60px;
   }
+  .s-products {
+    height: 54rem;
+  }
   .s-products .top h1 {
     text-align: center;
     font-size: 2.1rem;
@@ -541,6 +612,35 @@ footer span strong {
     left: 16px;
     width: 34rem;
     height: 38rem;
+  }
+  .s-produtos {
+    left: 0;
+    padding: 17px;
+    height: 115rem;
+  }
+  .s-produtos .close {
+    display: contents;
+  }
+  .s-produtos .close span {
+    margin-left: 320px;
+  }
+  .s-produtos .conteudo {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 35rem;
+  }
+  .s-produtos .conteudo .texto {
+    margin: 0;
+    margin-top: 20px;
+  }
+  .s-produtos .conteudo button {
+    margin: 0;
+    margin-top: 20px;
+  }
+  .carrinho {
+    right: 20px;
   }
   footer .main .right {
     flex-direction: column;

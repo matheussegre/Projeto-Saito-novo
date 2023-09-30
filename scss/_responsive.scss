@@ -120,6 +120,7 @@
     }
   }
   .s-products {
+    height: 54rem;
     .top {
       h1 {
         text-align: center;
@@ -147,6 +148,40 @@
       width: 34rem;
       height: 38rem;
     }
+  }
+
+  .s-produtos{
+    left: 0;
+    padding: 17px;
+    height: 115rem;
+    .close{
+      display: contents;
+      span{
+        margin-left: 320px;
+      }
+    }
+    .conteudo{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 35rem;
+      .texto{
+        margin: 0;
+        margin-top: 20px;
+      }
+      button{
+        margin: 0;
+        margin-top: 20px;
+      }
+      img{
+
+      }
+    }
+  }
+
+  .carrinho{
+    right: 20px;
   }
 
   footer .main .right {

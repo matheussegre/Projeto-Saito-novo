@@ -9,8 +9,10 @@ const buttonCad = document.querySelector(".js-cad");
 const btnCloseCad = document.querySelector(".js-close-cad");
 const contentCad = document.querySelector('.js-content-cad')
 
-const btnProd = document.getElementById("js-btn-prod");
+const btnProd = document.querySelector(".js-btn-prod");
+const btnProd2 = document.querySelector(".js-btn-prod2");
 const overlayProd = document.querySelector(".js-produtos");
+const btnCloseProd = document.querySelector(".js-close-prod");
 
 const btnCar = document.getElementById("btn-car");
 const overlayCar = document.querySelector(".js-car");
@@ -61,6 +63,9 @@ btnCloseCad.addEventListener("click", openMenuCad);
 btnProd.addEventListener("click", openProd);
 
 btnCar.addEventListener("click", openCar);
+
+btnProd2.addEventListener("click", openProd);
+btnCloseProd.addEventListener("click", openProd)
 
 
 // Função para validar a complexidade da senha
