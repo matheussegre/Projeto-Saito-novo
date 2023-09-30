@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container{
+    width: 100%;
+    max-width: 124.6rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  button{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  html {
+    font-size: 62.5%;
+  }

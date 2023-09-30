@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+  <div class="s-login js-login">
+    <div class="overlay"></div>
+    <div class="content-login">
+      <div class="menu">
+        <div class="close js-close">
+          <span>X</span>
+        </div>
+        <form>
+          <h1>Faça seu login:</h1>
+          <input id="inputEmailLogin" autocomplete="" autofocus="" class="login-email" data-test="username" name="login" placeholder="Digite seu email" required="" type="email">
+          <input id="inputSenhaLogin" class="login-pass" type="password" name="password" maxlength="20" placeholder="Digite sua senha" required="true" data-test="password">
+          <div class="cadastro">
+            <span>Não tem uma conta? Cadastre-se <strong id="js-btn-cad">AQUI!</strong></span>
+          </div>
+          <button id="buttonLogin">ENTRAR</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="s-cadastro js-cadastro">
+    <div class="overlay"></div>
+    <div class="content-cadastro">
+      <div class="menu">
+        <div class="close js-close-cad">
+          <span>X</span>
+        </div>
+        <form>
+          <h1>Preencha os campos abaixo:</h1>
+          <input id ="inputNomeCadastro" autocomplete="" autofocus="" class="cad" data-test="username" name="login" placeholder="Digite um nome de usuário" required="" type="text" maxlength="30">
+          <input id="inputEmailCadastro" autocomplete="" class="cad" data-test="username" name="login" placeholder="Digite seu email" required="" type="email">
+          <input id="inputSenhaCadastro" class="cad" type="password" name="password" maxlength="20" placeholder="Digite sua senha" required="true" data-test="password">
+          <input autocomplete=""  class="cad" data-test="username" name="login" placeholder="Digite seu endereço" required="" type="text" maxlength="30">
+          <button id="buttonCadastro">CADASTRAR</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+    <header>
+      <div class="container">
+        <h1>LOGO</h1>
+        <nav>
+          <ul>
+            <li>Produtos 1</li>
+            <li>Produtos 2</li>
+            <li>Produtos 3</li>
+          </ul>
+        </nav>
+        <div class="right">
+          <h1 id="btn-login">LOGIN</h1>
+          <h1>CARRINHO</h1>
+        </div>
+      </div>
+    </header>
+
+    <div class="s-hero">
+      <div class="container">
+        <div class="left">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+            <button class="btn-primary js-cad">Cadastre-se</button>
+          </div>
+        </div>
+        <div class="area-image">
+          <img src="./img/image-post.svg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="s-products">
+      <div class="container">
+        <div class="top">
+            <h1>Dê uma olhada em alguns de nossos produtos!</h1>
+        </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card-foto">
+                <img src="img/image-post.svg" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-foto">
+                <img src="img/image-post.svg" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-foto">
+                <img src="img/image-post.svg" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-foto">
+                <img src="img/image-post.svg" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-foto">
+                <img src="img/image-post.svg" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-foto">
+                <img src="img/image-post.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+        <div class="container">
+          <div class="main">
+            <div class="left">
+              <img src="./img/logo.svg" alt="Logo">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's
+              </p>
+            </div>
+            <div class="right">
+              <div class="nav">
+                <h6>Lista de páginas</h6>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Diferenciais</a></li>
+                  <li><a href="#">Galeria</a></li>
+                </ul>
+              </div>
+              <div class="nav">
+                <h6>Soluções</h6>
+                <ul>
+                  <li><a href="#">Texto link 01</a></li>
+                  <li><a href="#">Texto link 02</a></li>
+                  <li><a href="#">Texto link 03</a></li>
+                </ul>
+              </div>
+              <div class="nav">
+                <h6>Contato</h6>
+                <ul>
+                  <li><a href="#">Texto link 01</a></li>
+                  <li><a href="#">Texto link 02</a></li>
+                </ul>
+              </div>
+              <div class="nav">
+                <h6>Nossas redes sociais</h6>
+                <ul>
+                  <li>
+                    <a href="#"><img src="./img/instagram.svg" alt=""><span>Instagram</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./img/linkedin.svg" alt=""><span>Linkedin</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./img/youtube.svg" alt=""><span>Youtube</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints:{
+          320:{
+            slidesPerView: 1,
+            spaceBetween: 16,
+          },
+          600:{
+            slidesPerView: 2.3,
+            spaceBetween: 15,
+          },
+          1200:{
+            slidesPerView: 3,
+            spaceBetween: 32,
+          }
+        }
+
+      });
+    </script>
+</body>
+</html>
