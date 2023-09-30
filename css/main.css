@@ -263,6 +263,50 @@ header .right {
   color: white;
 }
 
+.s-produtos {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 100rem;
+  height: 100rem;
+  top: 70px;
+  left: 250px;
+  padding: 64px;
+  border-radius: 20px;
+  z-index: 2025;
+  background-color: white;
+}
+.s-produtos .conteudo {
+  display: flex;
+  align-items: center;
+  height: 30rem;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.s-produtos .conteudo .area-image {
+  margin: 0 50px;
+}
+.s-produtos .conteudo .texto {
+  margin-left: 60px;
+  max-width: 300px;
+}
+.s-produtos .conteudo .texto h3 {
+  font-size: 3rem;
+}
+.s-produtos .conteudo button {
+  padding: 20px;
+  margin-left: 50px;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(138, 63, 138);
+}
+.s-produtos .conteudo button:hover {
+  background-color: rgb(192, 132, 192);
+  color: rgb(8, 8, 8);
+}
+
 footer {
   padding: 4.8rem;
   background-color: rgb(138, 63, 138);
