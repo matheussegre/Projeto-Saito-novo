@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
+    <title>Revcards</title>
 
     <link
     rel="stylesheet"
@@ -53,64 +53,51 @@
     </div>
   </div>
 
-  <div class="s-produtos js-produtos">
-    <div class="overlay"></div>
+  <div class="s-produtos js-produtos" id="produtos">
     <div class="close js-close-prod">
       <span>X</span>
     </div>
-    <div class="conteudo">
+    <div class="conteudo"  id="produto1" titulo="Mind-mage" preco="10">
       <div class="area-image">
-        <img src="./img/image-post.svg" alt="">
+        <img src="./img/card7.png" alt="">
       </div>
       <div class="texto">
-        <h3>Nome do produto</h3>
+        <h3>Mind-mage</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad dolorem ipsa ipsum, inventore, maxime amet doloribus dignissimos maiores perspiciatis quaerat dolor similique unde. Accusantium nemo reprehenderit ratione ab ipsum aliquam.</p>
-        <strong>Preço</strong>
+        <strong>R$10,00</strong>
       </div>
-      <button>Adicionar ao carrinho</button>
+      <button onclick="addProduto1()">Adicionar ao carrinho</button>
     </div>
-    <div class="conteudo">
+    <div class="conteudo"  id="produto2" titulo="Sphinx"preco="12" >
       <div class="area-image">
-        <img src="./img/image-post.svg" alt="">
+        <img src="./img/card8.png" alt="">
       </div>
       <div class="texto">
-        <h3>Nome do produto</h3>
+        <h3>Sphinx</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad dolorem ipsa ipsum, inventore, maxime amet doloribus dignissimos maiores perspiciatis quaerat dolor similique unde. Accusantium nemo reprehenderit ratione ab ipsum aliquam.</p>
-        <strong>Preço</strong>
+        <strong>R$12,00</strong>
       </div>
-      <button>Adicionar ao carrinho</button>
+      <button onclick="addProduto2()">Adicionar ao carrinho</button>
     </div>
-    <div class="conteudo">
+    <div class="conteudo" id="produto3" titulo="Combo-3"preco="20">
       <div class="area-image">
-        <img src="./img/image-post.svg" alt="">
+        <img src="./img/card9.png" alt="">
       </div>
       <div class="texto">
-        <h3>Nome do produto</h3>
+        <h3>Combo 3 cards</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad dolorem ipsa ipsum, inventore, maxime amet doloribus dignissimos maiores perspiciatis quaerat dolor similique unde. Accusantium nemo reprehenderit ratione ab ipsum aliquam.</p>
-        <strong>Preço</strong>
+        <strong>R$20,00</strong>
       </div>
-      <button>Adicionar ao carrinho</button>
+      <button onclick="addProduto3()">Adicionar ao carrinho</button>
     </div>
   </div>
 
-  <div class="carrinho js-car">
-    <!-- <div class="close js-close">
-      <span>X</span>
-    </div> -->
-    <div class="conteudo">
-      <div class="prod">
-        <strong>Nome do produto</strong>
-        <strong>Valor</strong>
-      </div>
-      <div class="qtd">
-        <button>-</button>
-        <form action="">
-          <input type="text">
-        </form>
-        <button>+</button>
-      </div>
+  <div class="carrinho js-car" >
+    <div id="carrinho">
+
     </div>
-    <button>Finalizar Compra</button>
+
+    <button onclick="finalizar()">Finalizar Compra</button>
   </div>
 
     <header>
@@ -131,12 +118,12 @@
     <div class="s-hero">
       <div class="container">
         <div class="left" data-aos="fade-right">
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+            <h1>O melhor lugar para comprar cards avulsos, é aqui!</h1>
             <button class="btn-primary js-cad">Cadastre-se</button>
           </div>
         </div>
         <div class="area-image" data-aos="fade-left">
-          <img src="./img/image-post.svg" alt="">
+          <img src="./img/main-magic.png" alt="">
         </div>
       </div>
     </div>
@@ -155,32 +142,32 @@
           <div class="swiper-wrapper" >
             <div class="swiper-slide" data-aos="zoom-in">
               <div class="card-foto">
-                <img src="img/image-post.svg" alt="">
+                <img src="img/card1.png" alt="">
               </div>
             </div>
             <div class="swiper-slide" data-aos="zoom-in">
               <div class="card-foto">
-                <img src="img/image-post.svg" alt="">
+                <img src="img/card2.png" alt="">
               </div>
             </div>
             <div class="swiper-slide" data-aos="zoom-in">
               <div class="card-foto">
-                <img src="img/image-post.svg" alt="">
+                <img src="img/card3.png" alt="">
               </div>
             </div>
             <div class="swiper-slide">
               <div class="card-foto">
-                <img src="img/image-post.svg" alt="">
+                <img src="img/card4.png" alt="">
               </div>
             </div>
             <div class="swiper-slide">
               <div class="card-foto">
-                <img src="img/image-post.svg" alt="">
+                <img src="img/card5.png" alt="">
               </div>
             </div>
             <div class="swiper-slide">
               <div class="card-foto">
-                <img src="img/image-post.svg" alt="">
+                <img src="img/card6.png" alt="">
               </div>
             </div>
           </div>
@@ -194,8 +181,7 @@
           <div class="main">
             <div class="left">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's
+                Nós também compramos cards!
               </p>
             </div>
             <div class="right">
@@ -218,8 +204,8 @@
               <div class="nav">
                 <h6>Contato</h6>
                 <ul>
-                  <li><a href="#">Texto link 01</a></li>
-                  <li><a href="#">Texto link 02</a></li>
+                  <li><a href="#">Matheus Segre - RA: 2200969</a></li>
+                  <li><a href="#">Thiago Koiama - RA: 2103230</a></li>
                 </ul>
               </div>
               <div class="nav">

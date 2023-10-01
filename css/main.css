@@ -10,6 +10,9 @@
   align-items: center;
   justify-content: center;
 }
+.card-foto img {
+  max-width: 55%;
+}
 
 .btn-primary {
   display: inline-block;
@@ -233,7 +236,6 @@ header .right {
   position: relative;
   right: 63px;
   top: 48px;
-  background-color: rgba(240, 240, 240, 0.342);
   width: 100%;
   max-width: 61rem;
   height: 37rem;
@@ -329,6 +331,7 @@ header .right {
 }
 .s-produtos .conteudo .area-image {
   margin: 0 50px;
+  width: 165px;
 }
 .s-produtos .conteudo .texto {
   margin-left: 60px;
@@ -504,6 +507,10 @@ footer span strong {
 }
 /* Até Tablet */
 @media (max-width: 991px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
   .s-hero {
     display: flex;
     flex-direction: column;
@@ -548,6 +555,10 @@ footer span strong {
   }
 }
 @media (max-width: 768px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
   header nav {
     display: none;
   }
@@ -572,6 +583,10 @@ footer span strong {
 }
 /* Até Celulares */
 @media (max-width: 560px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
   .s-hero {
     display: flex;
     flex-direction: column;
@@ -634,6 +649,9 @@ footer span strong {
   .s-produtos .conteudo .texto {
     margin: 0;
     margin-top: 20px;
+  }
+  .s-produtos .conteudo .area-image {
+    width: 100px;
   }
   .s-produtos .conteudo button {
     margin: 0;

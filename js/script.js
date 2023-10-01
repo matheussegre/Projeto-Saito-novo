@@ -7,7 +7,7 @@ const overlayCad = document.querySelector(".js-cadastro");
 const btnCad = document.getElementById("js-btn-cad");
 const buttonCad = document.querySelector(".js-cad");
 const btnCloseCad = document.querySelector(".js-close-cad");
-const contentCad = document.querySelector('.js-content-cad')
+const contentCad = document.querySelector(".js-content-cad");
 
 const btnProd = document.querySelector(".js-btn-prod");
 const btnProd2 = document.querySelector(".js-btn-prod2");
@@ -17,37 +17,37 @@ const btnCloseProd = document.querySelector(".js-close-prod");
 const btnCar = document.getElementById("btn-car");
 const overlayCar = document.querySelector(".js-car");
 
+const carrinho = document.querySelector("#carrinho");
 
 function openMenuLogin(event) {
   event.preventDefault();
 
-  overlayLogin.classList.toggle('active');
-  contentLogin.classList.toggle('move');
+  overlayLogin.classList.toggle("active");
+  contentLogin.classList.toggle("move");
 }
 
 function openMenuCad(event) {
   event.preventDefault();
 
-  overlayCad.classList.toggle('active');
-  contentCad.classList.toggle('move');
+  overlayCad.classList.toggle("active");
+  contentCad.classList.toggle("move");
 
-  overlayLogin.classList.remove('active');
-  contentLogin.classList.remove('move');
+  overlayLogin.classList.remove("active");
+  contentLogin.classList.remove("move");
 }
 
-function openProd(event){
+function openProd(event) {
   event.preventDefault();
 
   overlayProd.classList.toggle("active");
   overlayProd.classList.toggle("move");
 }
 
-function openCar(event){
+function openCar(event) {
   event.preventDefault();
 
   overlayCar.classList.toggle("active");
   overlayCar.classList.toggle("move");
-
 }
 
 btnLogin.addEventListener("click", openMenuLogin);
@@ -65,8 +65,7 @@ btnProd.addEventListener("click", openProd);
 btnCar.addEventListener("click", openCar);
 
 btnProd2.addEventListener("click", openProd);
-btnCloseProd.addEventListener("click", openProd)
-
+btnCloseProd.addEventListener("click", openProd);
 
 // Função para validar a complexidade da senha
 function validarSenha(senha) {
@@ -136,3 +135,157 @@ document.querySelector("#buttonLogin").addEventListener("click", function (e) {
   e.preventDefault();
   realizarLogin();
 });
+
+function addProduto1() {
+  const produto1 = document.getElementById("produto1");
+  const titulo = produto1.getAttribute("titulo");
+  const preco = produto1.getAttribute("preco");
+  var conteudoDiv = document.createElement("div");
+  var qtd = 1;
+  conteudoDiv.className = "conteudo";
+  conteudoDiv.id = "produtoCarrinho";
+  var prodDiv = document.createElement("div");
+  prodDiv.className = "prod";
+  var nomeProduto = document.createElement("strong");
+  nomeProduto.textContent = titulo;
+  var valorProduto = document.createElement("strong");
+  valorProduto.textContent = `R$ ${preco}`;
+  prodDiv.appendChild(nomeProduto);
+  prodDiv.appendChild(valorProduto);
+  var qtdDiv = document.createElement("div");
+  qtdDiv.className = "qtd";
+  var botaoMenos = document.createElement("button");
+  botaoMenos.textContent = "-";
+  var formulario = document.createElement("form");
+  formulario.action = "";
+  var inputQtd = document.createElement("input");
+  inputQtd.type = "text";
+  inputQtd.value = `${qtd}`;
+  var botaoMais = document.createElement("button");
+  botaoMais.textContent = "+";
+  formulario.appendChild(inputQtd);
+  qtdDiv.appendChild(botaoMenos);
+  qtdDiv.appendChild(formulario);
+  qtdDiv.appendChild(botaoMais);
+  conteudoDiv.appendChild(prodDiv);
+  conteudoDiv.appendChild(qtdDiv);
+  carrinho.appendChild(conteudoDiv);
+  botaoMais.addEventListener("click", function () {
+    qtd = qtd + 1;
+    inputQtd.value = `${qtd}`;
+  });
+  botaoMenos.addEventListener("click", function () {
+    qtd = qtd - 1;
+    inputQtd.value = `${qtd}`;
+    if (inputQtd.value == "0") {
+      console.log("oi");
+      conteudoDiv.style.display = "none";
+    }
+  });
+
+  overlayProd.classList.toggle("active");
+  overlayProd.classList.toggle("move");
+}
+function addProduto2() {
+  const produto2 = document.getElementById("produto2");
+  const titulo = produto2.getAttribute("titulo");
+  const preco = produto2.getAttribute("preco");
+  var qtd = 1;
+  var conteudoDiv = document.createElement("div");
+  conteudoDiv.className = "conteudo";
+  conteudoDiv.id = "produtoCarrinho";
+  var prodDiv = document.createElement("div");
+  prodDiv.className = "prod";
+  var nomeProduto = document.createElement("strong");
+  nomeProduto.textContent = titulo;
+  var valorProduto = document.createElement("strong");
+  valorProduto.textContent = `R$ ${preco}`;
+  prodDiv.appendChild(nomeProduto);
+  prodDiv.appendChild(valorProduto);
+  var qtdDiv = document.createElement("div");
+  qtdDiv.className = "qtd";
+  var botaoMenos = document.createElement("button");
+  botaoMenos.textContent = "-";
+  var formulario = document.createElement("form");
+  formulario.action = "";
+  var inputQtd = document.createElement("input");
+  inputQtd.type = "text";
+  inputQtd.value = `${qtd}`;
+  var botaoMais = document.createElement("button");
+  botaoMais.textContent = "+";
+  formulario.appendChild(inputQtd);
+  qtdDiv.appendChild(botaoMenos);
+  qtdDiv.appendChild(formulario);
+  qtdDiv.appendChild(botaoMais);
+  conteudoDiv.appendChild(prodDiv);
+  conteudoDiv.appendChild(qtdDiv);
+  carrinho.appendChild(conteudoDiv);
+  botaoMais.addEventListener("click", function () {
+    qtd = qtd + 1;
+    inputQtd.value = `${qtd}`;
+  });
+  botaoMenos.addEventListener("click", function () {
+    qtd = qtd - 1;
+    inputQtd.value = `${qtd}`;
+    if (inputQtd.value == "0") {
+      console.log("oi");
+      conteudoDiv.style.display = "none";
+    }
+  });
+
+  overlayProd.classList.toggle("active");
+  overlayProd.classList.toggle("move");
+}
+function addProduto3() {
+  const produto3 = document.getElementById("produto3");
+  const titulo = produto3.getAttribute("titulo");
+  const preco = produto3.getAttribute("preco");
+  var conteudoDiv = document.createElement("div");
+  var qtd = 1;
+  conteudoDiv.className = "conteudo";
+  conteudoDiv.id = "produtoCarrinho";
+  var prodDiv = document.createElement("div");
+  prodDiv.className = "prod";
+  var nomeProduto = document.createElement("strong");
+  nomeProduto.textContent = titulo;
+  var valorProduto = document.createElement("strong");
+  valorProduto.textContent = `R$ ${preco}`;
+  prodDiv.appendChild(nomeProduto);
+  prodDiv.appendChild(valorProduto);
+  var qtdDiv = document.createElement("div");
+  qtdDiv.className = "qtd";
+  var botaoMenos = document.createElement("button");
+  botaoMenos.textContent = "-";
+  var formulario = document.createElement("form");
+  formulario.action = "";
+  var inputQtd = document.createElement("input");
+  inputQtd.type = "text";
+  inputQtd.value = `${qtd}`;
+  var botaoMais = document.createElement("button");
+  botaoMais.textContent = "+";
+  formulario.appendChild(inputQtd);
+  qtdDiv.appendChild(botaoMenos);
+  qtdDiv.appendChild(formulario);
+  qtdDiv.appendChild(botaoMais);
+  conteudoDiv.appendChild(prodDiv);
+  conteudoDiv.appendChild(qtdDiv);
+  carrinho.appendChild(conteudoDiv);
+  botaoMais.addEventListener("click", function () {
+    qtd = qtd + 1;
+    inputQtd.value = `${qtd}`;
+  });
+  botaoMenos.addEventListener("click", function () {
+    qtd = qtd - 1;
+    inputQtd.value = `${qtd}`;
+    if (inputQtd.value == "0") {
+      console.log("oi");
+      conteudoDiv.style.display = "none";
+    }
+  });
+  overlayProd.classList.toggle("active");
+  overlayProd.classList.toggle("move");
+}
+
+function finalizar(){
+  alert("Pedido finalizado com sucesso!");
+}
